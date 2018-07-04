@@ -187,7 +187,10 @@ build_dependencies() {
 
 
   mkdir -p "$CACHE_DIR/lib/html"
+  echo "Install build to $CACHE_DIR/lib/html"
   cp -r "$BUILD_DIR/dist" "$CACHE_DIR/lib/html"
+  ls -l $CACHE_DIR 
+   
   # TODO: run_if_present 'build'
   log_build_scripts
 }
