@@ -230,8 +230,6 @@ summarize_build() {
   mmeasure 'modules.size' "$(measure_size)"
 }
 
-cp $BUILD_DIR/distr /app/html -r
-
 header "Build succeeded!"
 mcount "compile"
 summarize_build | output "$LOG_FILE"
