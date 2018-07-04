@@ -187,7 +187,7 @@ build_dependencies() {
 
   ls -l $BUILD_DIR
   mkdir -p "$BUILD_DIR_ORIG/lib/html"
-  cp "$BUILD_DIR/distr" "$BUILD_DIR_ORIG/lib/html"
+  cp -r "$BUILD_DIR/dist/*" "$BUILD_DIR_ORIG/lib/html"
   # TODO: run_if_present 'build'
   log_build_scripts
 }
