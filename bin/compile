@@ -185,7 +185,7 @@ build_dependencies() {
 
   run_if_present 'heroku-postbuild'
 
-  mkdir "$BUILD_DIR_ORIG/lib/html"
+  mkdir -p "$BUILD_DIR_ORIG/lib/html"
   cp "$BUILD_DIR/distr" "$BUILD_DIR_ORIG/lib/html"
   # TODO: run_if_present 'build'
   log_build_scripts
