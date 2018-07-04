@@ -184,6 +184,9 @@ build_dependencies() {
   mtime "modules.time.cache.$cache_status" "${start}"
 
   run_if_present 'heroku-postbuild'
+
+  mkdir "$BUILD_DIR/lib/html"
+  cp "$BUILD_DIR/frontend/distr" "$BUILD_DIR/lib/html"
   # TODO: run_if_present 'build'
   log_build_scripts
 }
@@ -229,6 +232,7 @@ summarize_build() {
 
   mmeasure 'modules.size' "$(measure_size)"
 }
+
 
 header "Build succeeded!"
 mcount "compile"
